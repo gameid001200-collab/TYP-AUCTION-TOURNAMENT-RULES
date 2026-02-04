@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TYP AUCTION TOURNAMENT RULES & REGULATIONS</title>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background: #f0f2f5;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 700px;
+        margin: 40px auto;
+        padding: 0 15px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 1.9rem;
+        color: #2c3e50;
+        margin-bottom: 30px;
+    }
+
+    /* Card Style */
+    .rule-card {
+        background: #fff;
+        margin-bottom: 15px;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        transition: transform 0.2s, box-shadow 0.2s;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .rule-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .rule-title {
+        font-weight: bold;
+        font-size: 1rem;
+        color: #e74c3c;
+    }
+
+    .rule-details {
+        margin-top: 10px;
+        font-size: 0.95rem;
+        color: #34495e;
+        display: none; /* Initially hidden */
+        line-height: 1.6;
+    }
+
+    /* Smooth expand animation */
+    .rule-details.show {
+        display: block;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-5px);}
+        to { opacity: 1; transform: translateY(0);}
+    }
+
+    /* Responsive for small screens */
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        .rule-card {
+            padding: 15px;
+        }
+
+        .rule-title {
+            font-size: 0.95rem;
+        }
+
+        .rule-details {
+            font-size: 0.9rem;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>TYP AUCTION TOURNAMENT RULES & REGULATIONS</h1>
+
+    <!-- Rule Card Example -->
+    <div class="rule-card" onclick="toggleDetails(this)">
+        <div class="rule-title">স্কোয়াড সাবমিশন সংক্রান্ত</div>
+        <div class="rule-details">
+            <p><strong>A) সাবমিশন ডেডলাইন:</strong> স্কোয়াড সাবমিটের ডেডলাইন হলো ম্যাচ ডে-এর দিন বিকাল <strong>১২:৫৯</strong> মিনিট।</p>
+            <p><strong>B) ডেডলাইন মিস:</strong> ডেডলাইনের আগে স্কোয়াড সাবমিট করতে ব্যর্থ হলে, সর্বশেষ ম্যাচডে স্কোয়াড ব্যবহার করে ফিক্সার তৈরি করা হবে।</p>
+            <p><strong>কমিটির সিদ্ধান্ত চূড়ান্ত সিদ্ধান্ত:</strong> সকল টিম ক্যাপ্টেনকে মেনে নিতে হবে।</p>
+        </div>
+    </div>
+
+    <!-- আরও Rule Card বানানো যায় একইভাবে -->
+    <div class="rule-card" onclick="toggleDetails(this)">
+        <div class="rule-title">নতুন রুল উদাহরণ</div>
+        <div class="rule-details">
+            <p>এখানে বিস্তারিত লিখুন যা tap করলে দেখাবে।</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function toggleDetails(card) {
+        const details = card.querySelector('.rule-details');
+        details.classList.toggle('show');
+    }
+</script>
+
+</body>
+</html>
